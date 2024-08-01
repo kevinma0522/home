@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Carousel from "react-bootstrap/Carousel";
-import Button from "react-bootstrap/Button";
 
 const PersonalProjectCard = ({ value, gradient }) => {
   const { name, description, images } = value;
-  const [showDescription, setShowDescription] = useState(false);
 
   const cardStyle = {
     width: "100%",
     maxWidth: "800px", // Increased max-width to make the card bigger
-    height: "600px", // Increased height to make the card bigger
+    height: "600px", // Fixed height for the card
     margin: "auto",
     background: `linear-gradient(136deg,${gradient})`, // Use the gradient from mainBody
     backgroundSize: "1200% 1200%",
@@ -21,15 +19,13 @@ const PersonalProjectCard = ({ value, gradient }) => {
 
   const carouselStyle = {
     height: "350px", // Fixed height for the carousel to maintain card size
+    overflow: "hidden",
   };
 
   const imageStyle = {
-    height: "350px", // Ensure images fit within the carousel height
+    height: "auto", // Allow images to maintain their own height
+    width: "100%",
     objectFit: "cover", // Maintain aspect ratio and cover the area
-  };
-
-  const handleReadMore = () => {
-    setShowDescription(!showDescription);
   };
 
   return (
@@ -46,18 +42,9 @@ const PersonalProjectCard = ({ value, gradient }) => {
               ))}
             </Carousel>
           )}
-          {showDescription && (
-            <Card.Text className="text-dark mt-3">
-              {description || "Project Description"}
-            </Card.Text>
-          )}
-          <Button
-            variant="link"
-            onClick={handleReadMore}
-            className="mt-auto align-self-start"
-          >
-            {showDescription ? "Show Less" : "Read More"}
-          </Button>
+          <Card.Text className="text-dark mt-3">
+            {description || "Project Description"}
+          </Card.Text>
         </Card.Body>
       </Card>
     </Col>
