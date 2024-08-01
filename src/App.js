@@ -34,7 +34,7 @@ const Home = React.forwardRef((props, ref) => {
         icons={mainBody.icons}
         ref={ref}
       />
-      {about.show && (
+      {/* {about.show && (
         <AboutMe
           heading={about.heading}
           message={about.message}
@@ -42,18 +42,18 @@ const Home = React.forwardRef((props, ref) => {
           imgSize={about.imageSize}
           resume={about.resume}
         />
-      )}
+      )} */}
       {experiences.show && (
         <Experience experiences={experiences} />
       )}
-      {repos.show && (
+      {/* {repos.show && (
         <Project
           heading={repos.heading}
           username={repos.gitHubUsername}
           length={repos.reposLength}
           specfic={repos.specificRepos}
         />
-      )}
+      )} */}
       {personalProjects.show && ( // Add this block
         <PersonalProject
           heading={personalProjects.heading}
