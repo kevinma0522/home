@@ -4,7 +4,7 @@ import { Jumbotron } from "./migration";
 import Row from "react-bootstrap/Row";
 import PersonalProjectCard from "./PersonalProjectCard";
 
-const PersonalProject = ({ heading, projects }) => {
+const PersonalProject = ({ heading, projects, gradient }) => {
   return (
     <Jumbotron
       fluid
@@ -20,6 +20,7 @@ const PersonalProject = ({ heading, projects }) => {
                 key={`personal-project-card-${index}`}
                 id={`personal-project-card-${index}`}
                 value={project}
+                gradient={gradient}
               />
             ))
             : <p>No projects available</p>}
