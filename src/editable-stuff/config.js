@@ -65,7 +65,7 @@ const personalProjects = {
   projects: [
     {
       name: "wya",
-      description: "Social Media startup",
+      description: "wya is a social media startup developed by a 2-person team. The app focuses on hyperlocality as a social media niche, users profiles only show up on other users' feed if they are in the same general location, aiming to encourage in-person connections and revitalize  the culture of talking to new people in new environments. ",
       images: [
         require("../editable-stuff/wya_images/create.png"),
         require("../editable-stuff/wya_images/customize.png"),
@@ -73,9 +73,22 @@ const personalProjects = {
         require("../editable-stuff/wya_images/drop.png"),
         require("../editable-stuff/wya_images/new.png"),
         require("../editable-stuff/wya_images/see.png")
-      ]
-    }
+      ],
+      links: ["https://apps.apple.com/us/app/wya-where-you-at/id6443438938"],
+      linkDescription: "App Store Launch Link"
+    },
     // Add more personal projects here
+    {
+      name: "ML Sports Training Research",
+      description: "These projects were developed during covid as an alternative to tennis coaches. As a player, coaching can be really expensive, and even in non-covid times, there's situations where players would like to train alone. Thus I developed two real-time data classifcation systems for tennis and table tennis, to achieve the goal of 'training' users at low cost with high accuracy.",
+      images:[
+        require("../editable-stuff/Research/architecture.png"),
+        require("../editable-stuff/Research/pingpongexample.png"),
+        require("../editable-stuff/Research/tennisexample.png")
+      ],
+      links:["https://ieeexplore.ieee.org/document/9253157","https://ieeexplore.ieee.org/document/9378695"],
+      linkDescription:"Research Conference Publications"
+    }
   ]
 };
 
