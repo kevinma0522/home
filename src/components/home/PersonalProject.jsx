@@ -6,10 +6,14 @@ import PersonalProjectCard from "./PersonalProjectCard";
 
 const PersonalProject = ({ heading, projects }) => {
   return (
-    <Jumbotron fluid id="personal-projects" className="bg-light m-0">
-      <Container>
-        <h2 className="display-4 pb-5 text-center">{heading}</h2>
-        <Row>
+    <Jumbotron
+      fluid
+      id="personal-projects"
+      className="bg-transparent bgstyle text-light min-vh-100 d-flex align-content-center align-items-center flex-wrap m-0"
+    >
+      <Container className="text-center">
+        <h2 className="display-4 pb-5">{heading}</h2>
+        <Row className="justify-content-center">
           {projects.length
             ? projects.map((project, index) => (
               <PersonalProjectCard
