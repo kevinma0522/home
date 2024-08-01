@@ -67,12 +67,12 @@ const personalProjects = {
       name: "wya",
       description: "Social Media startup",
       images: [
-        "src/assets/img/wya_images/create.png",
-        "src/assets/img/wya_images/customize.png",
-        "src/assets/img/wya_images/discover.png",
-        "src/assets/img/wya_images/drop.png",
-        "src/assets/img/wya_images/new.png",
-        "src/assets/img/wya_images/see.png"
+        require("../editable-stuff/wya_images/create.png"),
+        require("../editable-stuff/wya_images/customize.png"),
+        require("../editable-stuff/wya_images/discover.png"),
+        require("../editable-stuff/wya_images/drop.png"),
+        require("../editable-stuff/wya_images/new.png"),
+        require("../editable-stuff/wya_images/see.png")
       ]
     }
     // Add more personal projects here
