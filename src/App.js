@@ -54,10 +54,11 @@ const Home = React.forwardRef((props, ref) => {
           specfic={repos.specificRepos}
         />
       )} */}
-      {personalProjects.show && ( // Add this block
+      {personalProjects.show && (
         <PersonalProject
           heading={personalProjects.heading}
           projects={personalProjects.projects}
+          gradient={mainBody.gradientColors} // Pass the gradient prop
         />
       )}
       {leadership.show && (
