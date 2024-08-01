@@ -6,30 +6,18 @@ const navBar = {
 // Main Body SECTION
 const mainBody = {
   gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Hashir",
+  firstName: "Kevin",
   middleName: "",
-  lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
+  lastName: "Ma",
+  message: "Passionate about doing good things in the world, one line of code at a time. ",
   icons: [
     {
       image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
-    },
-    {
-      image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
-    },
-    {
-      image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
+      url: "https://github.com/kevinma0522",
     },
     {
       image: "fa-linkedin",
       url: "https://www.linkedin.com/in/hashirshoaeb/",
-    },
-    {
-      image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
     },
   ],
 };
@@ -51,11 +39,11 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../editable-stuff/hashirshoaeb.png"),
+  imageLink: require("../editable-stuff/kevinma.jpeg"),
   imageSize: 375,
   message:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+    "My name is Kevin Ma. I am currently a student at Columbia University, graduating in May 2025. I'm passionate about using skills in software engineering to better people's lives, and in my free time I like working on iOS apps and build tools or full-length interactive courses for topics I think people will find useful. ",
+  resume: require("../editable-stuff/resume.pdf"),
 };
 
 // PROJECTS SECTION
@@ -66,9 +54,28 @@ const about = {
 const repos = {
   show: true,
   heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
-  reposLength: 4,
+  gitHubUsername: "kevinma0522", //i.e."johnDoe12Gh"
+  reposLength: 0,
   specificRepos: [],
+};
+
+const personalProjects = {
+  show: true,
+  heading: "Personal Projects",
+  projects: [
+    {
+      name: "wya",
+      description: "Social Media startup",
+      images: [
+        "/path/to/image1.jpg",
+        "/path/to/image2.jpg",
+        "/path/to/image3.jpg",
+        "/path/to/image4.jpg",
+        "/path/to/image5.jpg"
+      ]
+    }
+    // Add more personal projects here
+  ]
 };
 
 // Leadership SECTION
@@ -101,13 +108,13 @@ const skills = {
   heading: "Skills",
   hardSkills: [
     { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
+    { name: "SQL", value: 90 },
     { name: "Data Structures", value: 85 },
     { name: "C/C++", value: 65 },
     { name: "JavaScript", value: 90 },
     { name: "React", value: 65 },
     { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+    { name: "C++", value: 80 },
   ],
   softSkills: [
     { name: "Goal-Oriented", value: 80 },
@@ -126,8 +133,8 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+    "I'm currently looking for new-grad entry-level Software Engineering, UI/UX Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+  email: "k.ma@columbia.edu",
 };
 
 const experiences = {
@@ -135,13 +142,13 @@ const experiences = {
   heading: "Experiences",
   data: [
     {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
+      role: 'Data Engineer/SWE Intern @ Amazon',// Here Add Company Name
+      companylogo: require('../assets/img/images.png'),
       date: 'June 2018 – Present',
     },
     {
       role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
+      companylogo: require('../assets/img/toyon.jpeg'),
       date: 'May 2017 – May 2018',
     },
   ]
@@ -152,4 +159,4 @@ const experiences = {
 //   show: false,
 // };
 
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, repos,personalProjects,skills, leadership, getInTouch, experiences};

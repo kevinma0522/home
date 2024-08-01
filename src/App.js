@@ -8,11 +8,13 @@ import {
   leadership,
   skills,
   getInTouch,
-  experiences
+  experiences,
+  personalProjects // Add this line
 } from "./editable-stuff/config.js";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
 import Project from "./components/home/Project";
+import PersonalProject from "./components/home/PersonalProject"; // Add this line
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Skills from "./components/home/Skills";
@@ -20,7 +22,6 @@ import Skills from "./components/home/Skills";
 // import BlogPost from "./components/blog/BlogPost";
 import GetInTouch from "./components/home/GetInTouch.jsx";
 import Leadership from "./components/home/Leadership.jsx";
-
 import Experience from "./components/home/Experience";
 
 const Home = React.forwardRef((props, ref) => {
@@ -42,11 +43,9 @@ const Home = React.forwardRef((props, ref) => {
           resume={about.resume}
         />
       )}
-      {
-        experiences.show && (
-          <Experience experiences={experiences}/>
-        )
-      }
+      {experiences.show && (
+        <Experience experiences={experiences} />
+      )}
       {repos.show && (
         <Project
           heading={repos.heading}
@@ -55,6 +54,12 @@ const Home = React.forwardRef((props, ref) => {
           specfic={repos.specificRepos}
         />
       )}
+      {/* {personalProjects.show && ( // Add this block
+        <PersonalProject
+          heading={personalProjects.heading}
+          projects={personalProjects.projects}
+        />
+      )} */}
       {leadership.show && (
         <Leadership
           heading={leadership.heading}
@@ -70,7 +75,6 @@ const Home = React.forwardRef((props, ref) => {
           softSkills={skills.softSkills}
         />
       )}
-      
     </>
   );
 });
