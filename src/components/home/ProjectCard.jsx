@@ -13,6 +13,7 @@ const ProjectCard = ({ value }) => {
     languages_url,
     pushed_at,
   } = value;
+
   return (
     <Col md={6}>
       <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
@@ -93,7 +94,6 @@ const Language = ({ languages_url, repo_url }) => {
               {Math.trunc((data[language] / total_count) * 1000) / 10} %
             </span>
           </a>
-
         ))
         : "code yet to be deployed."}
     </div>
@@ -101,10 +101,17 @@ const Language = ({ languages_url, repo_url }) => {
 };
 
 const CardFooter = ({ star_count, repo_url, pushed_at }) => {
-  const [updated_at, setUpdated_at] = useState("0 mints");
+  const [updated_at, setUpdated_at] = useState("");
 
   const handleUpdatetime = useCallback(() => {
-    const date = new Date(pushed_at);
+    let date;
+    if (!pushed_at || isNaN(new Date(pushed_at).getTime())) {
+      console.error("Invalid or missing pushed_at value, setting default date.");
+      date = new Date("2024-07-31T00:00:00Z"); // Default date
+    } else {
+      date = new Date(pushed_at);
+    }
+
     const nowdate = new Date();
     const diff = nowdate.getTime() - date.getTime();
     const hours = Math.trunc(diff / 1000 / 60 / 60);
@@ -115,7 +122,7 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
       return setUpdated_at(`${hours.toString()} ${measurement} ago`);
     } else {
       const options = { day: "numeric", month: "long", year: "numeric" };
-      const time = new Intl.DateTimeFormat("en-US", options).format(date);
+      const time = new Date("2024-07-31T00:00:00Z")
       return setUpdated_at(`on ${time}`);
     }
   }, [pushed_at]);
