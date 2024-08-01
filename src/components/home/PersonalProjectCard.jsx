@@ -8,8 +8,8 @@ const PersonalProjectCard = ({ value, gradient }) => {
 
   const cardStyle = {
     width: "100%",
-    maxWidth: "800px", // Increased max-width to make the card bigger
-    height: "600px", // Fixed height for the card
+    maxWidth: "400px", // Increased max-width to make the card bigger
+    height: "1000px", // Fixed height for the card
     margin: "auto",
     background: `linear-gradient(136deg,${gradient})`, // Use the gradient from mainBody
     backgroundSize: "1200% 1200%",
