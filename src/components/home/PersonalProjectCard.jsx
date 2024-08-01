@@ -10,7 +10,7 @@ const PersonalProjectCard = ({ value }) => {
     width: "100%",
     maxWidth: "400px",
     margin: "auto",
-    backgroundColor: "#cceeff",
+    backgroundColor: "#FF5733",
     borderRadius: "1.5rem", // More rounded corners
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Floating effect
   };
