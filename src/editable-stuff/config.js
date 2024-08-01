@@ -67,12 +67,12 @@ const personalProjects = {
       name: "wya",
       description: "Social Media startup",
       images: [
-        "../assets/img/wya_images/create.png",
-        "../assets/img/wya_images/customize.png",
-        "../assets/img/wya_images/discover.png",
-        "../assets/img/wya_images/drop.png",
-        "../assets/img/wya_images/new.png",
-        "../assets/img/wya_images/see.png"
+        "wya_images/create.png",
+        "wya_images/customize.png",
+        "wya_images/discover.png",
+        "wya_images/drop.png",
+        "wya_images/new.png",
+        "wya_images/see.png"
       ]
     }
     // Add more personal projects here
