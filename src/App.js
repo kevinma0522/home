@@ -54,12 +54,12 @@ const Home = React.forwardRef((props, ref) => {
           specfic={repos.specificRepos}
         />
       )}
-      {/* {personalProjects.show && ( // Add this block
+      {personalProjects.show && ( // Add this block
         <PersonalProject
           heading={personalProjects.heading}
           projects={personalProjects.projects}
         />
-      )} */}
+      )}
       {leadership.show && (
         <Leadership
           heading={leadership.heading}
