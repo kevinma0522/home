@@ -8,8 +8,8 @@ const PersonalProjectCard = ({ value, gradient }) => {
 
   const cardStyle = {
     width: "100%",
-    maxWidth: "800px", // Increased max-width to make the card bigger
-    height: "600px", // Fixed height for the card
+    maxWidth: "500px", // Adjusted max-width to make the card more vertical
+    height: "700px", // Increased height for the card
     margin: "auto",
     background: `linear-gradient(136deg,${gradient})`, // Use the gradient from mainBody
     backgroundSize: "1200% 1200%",
@@ -18,14 +18,14 @@ const PersonalProjectCard = ({ value, gradient }) => {
   };
 
   const carouselStyle = {
-    height: "350px", // Fixed height for the carousel to maintain card size
+    height: "450px", // Increased height for the carousel to match card height
     overflow: "hidden",
   };
 
   const imageStyle = {
-    height: "100%", // Make sure the image covers the height of the carousel
-    width: "100%", // Make sure the image covers the width of the carousel
-    objectFit: "contain", // Ensure the whole image is shown
+    height: "100%", // Ensure the image covers the height of the carousel
+    width: "100%", // Ensure the image covers the width of the carousel
+    objectFit: "contain", // Ensure the whole image is shown without being cut off
   };
 
   return (
