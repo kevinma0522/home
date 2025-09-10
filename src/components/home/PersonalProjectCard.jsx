@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import Carousel from "react-bootstrap/Carousel";
 
 const PersonalProjectCard = ({ value, gradient }) => {
-  const { name, description, images } = value;
+  const { name, description, images, links, linkDescription } = value;
 
   const cardStyle = {
     width: "100%",
@@ -45,6 +45,22 @@ const PersonalProjectCard = ({ value, gradient }) => {
           <Card.Text className="text-dark mt-3">
             {description || "Project Description"}
           </Card.Text>
+          {links && links.length > 0 && (
+            <div className="mt-auto">
+              {links.map((link, index) => (
+                <a
+                  key={index}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline-dark btn-sm"
+                  style={{ marginRight: "10px" }}
+                >
+                  {linkDescription || "Visit Link"}
+                </a>
+              ))}
+            </div>
+          )}
         </Card.Body>
       </Card>
     </Col>

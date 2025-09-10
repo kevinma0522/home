@@ -36,7 +36,7 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
   return (
     <Jumbotron id="aboutme" className="m-0">
       <div className="container row">
-        <div className="col-5 d-none d-lg-block align-self-center">
+        <div className="col-5 d-none d-lg-block align-self-center text-center">
           {showPic && (
             <img
               className="border border-secondary rounded-circle"
@@ -44,6 +44,7 @@ const AboutMe = ({ heading, message, link, imgSize, resume }) => {
               alt="profilepicture"
               width={imgSize}
               height={imgSize}
+              style={{ objectFit: 'cover' }}
             />
           )}
         </div>
