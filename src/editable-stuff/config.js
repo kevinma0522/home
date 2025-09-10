@@ -42,7 +42,7 @@ const about = {
   imageLink: require("../editable-stuff/kevinma.jpeg"),
   imageSize: 375,
   message:
-    "My name is Kevin Ma. I am currently a student at Columbia University, graduating in May 2025. I'm passionate about using skills in software engineering to better people's lives, and in my free time I like working on iOS apps and build tools or full-length interactive courses for topics I think people will find useful. ",
+    "My name is Kevin Ma. I am currently a student at Columbia University, graduating in December 2025. I'm an absolute grinder who doesn't hesitate to do 40-hour coding marathons to accomplish goals. I've founded and scaled a startup from pre-idea to $400k pre-seed funding, have multiple years of experience working for Amazon, and extensive machine learning experience through both my two years working as a machine learning intern and now where I'm deploying in-house quant models for my fintech products. I'm passionate about using skills in software engineering to better people's lives, and in my free time I like working on iOS apps and build tools or full-length interactive courses for topics I think people will find useful. ",
   resume: require("../editable-stuff/resume.pdf"),
 };
 
@@ -63,6 +63,15 @@ const personalProjects = {
   show: true,
   heading: "Personal Projects",
   projects: [
+    {
+      name: "AgentOmen",
+      description: "AgentOmen is a fintech startup I founded and developed that has raised $400k in pre-seed funding. It's the first ever agentic investment platform registered with the SEC, revolutionizing the way people invest through AI-powered agents. The platform combines advanced machine learning models with user-friendly interfaces to democratize sophisticated investment strategies.",
+      images: [
+        require("../assets/img/omen_og_image.png")
+      ],
+      links: ["https://agentomen.com"],
+      linkDescription: "Visit AgentOmen.com"
+    },
     {
       name: "wya",
       description: "wya is a social media startup developed by a 2-person team. The app focuses on hyperlocality as a social media niche, users profiles only show up on other users' feed if they are in the same general location, aiming to encourage in-person connections and revitalize  the culture of talking to new people in new environments. ",
@@ -118,7 +127,7 @@ const leadership = {
 
 // SKILLS SECTION
 const skills = {
-  show: true,
+  show: false,
   heading: "Skills",
   hardSkills: [
     { name: "Python", value: 90 },
